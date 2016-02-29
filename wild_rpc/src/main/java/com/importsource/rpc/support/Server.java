@@ -1,6 +1,6 @@
 package com.importsource.rpc.support;
 
-import com.importsource.rpc.protocal.Invocation;
+import com.importsource.rpc.protocol.Invocation;
 
 public interface Server {
 	public void stop();

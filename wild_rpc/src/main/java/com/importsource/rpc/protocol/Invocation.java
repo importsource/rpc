@@ -1,4 +1,4 @@
-package com.importsource.rpc.protocal;
+package com.importsource.rpc.protocol;
 
 import java.io.Serializable;
 import java.util.Arrays;

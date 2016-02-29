@@ -6,7 +6,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import com.importsource.rpc.protocal.Invocation;
+import com.importsource.rpc.protocol.Invocation;
 
 public class Client {
 	private String host;

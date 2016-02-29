@@ -6,7 +6,7 @@ import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.importsource.rpc.protocal.Invocation;
+import com.importsource.rpc.protocol.Invocation;
 import com.importsource.rpc.support.Client;
 import com.importsource.rpc.support.Listener;
 import com.importsource.rpc.support.Server;
@@ -21,7 +21,7 @@ public class RPC {
 			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 				Invocation invo = new Invocation();
 				invo.setInterfaces(clazz);
-				invo.setMethod(new com.importsource.rpc.protocal.Method(method.getName(),method.getParameterTypes()));
+				invo.setMethod(new com.importsource.rpc.protocol.Method(method.getName(),method.getParameterTypes()));
 				invo.setParams(args);
 				client.invoke(invo);
 				return invo.getResult();
