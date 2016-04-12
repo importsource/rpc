@@ -5,23 +5,25 @@ package com.importsource.rpc.entity;
  *
  * @param <T>
  */
-public class ServiceInfo<T> {
-	private Class<T> interfaceDefine;
-	private Class<T> implDefine;
+@SuppressWarnings("rawtypes")
+public class ServiceInfo {
+	
+	private Class interfaceDefine;
+	private Class implDefine;
 
-	public Class<T> getInterfaceDefine() {
+	public Class getInterfaceDefine() {
 		return interfaceDefine;
 	}
 
-	public void setInterfaceDefine(Class<T> interfaceDefine) {
+	public void setInterfaceDefine(Class interfaceDefine) {
 		this.interfaceDefine = interfaceDefine;
 	}
 
-	public Class<T> getImplDefine() {
+	public Class getImplDefine() {
 		return implDefine;
 	}
 
-	public void setImplDefine(Class<T> implDefine) {
+	public void setImplDefine(Class implDefine) {
 		this.implDefine = implDefine;
 	}
 }

@@ -3,10 +3,11 @@ C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\support\Listen
 C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\protocol\Method.java
 C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\MainClient.java
 C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\op\XService.java
+C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\BatchMain.java
+C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\RPC.java
 C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\entity\ServiceInfo.java
 C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\op\RemoteEcho.java
 C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\protocol\Invocation.java
-C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\RPC.java
 C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\op\MyEcho.java
 C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\op\XServiceImpl.java
 C:\Users\Hezf\git\rpc\wild_rpc\src\main\java\com\importsource\rpc\support\Server.java

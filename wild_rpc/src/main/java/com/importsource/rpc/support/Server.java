@@ -9,7 +9,7 @@ public interface Server {
 	public void stop();
 	public void start();
 	public void register(Class interfaceDefiner,Class impl);
-	public <T> void register(List<ServiceInfo<T>> serviceInfos);
+	public void register(List<ServiceInfo> serviceInfos);
 	public void call(Invocation invo);
 	public boolean isRunning();
 	public int getPort();

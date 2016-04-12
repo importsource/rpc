@@ -3,6 +3,7 @@ com\importsource\rpc\op\XServiceImpl.class
 com\importsource\rpc\support\Server.class
 com\importsource\rpc\entity\ServiceInfo.class
 com\importsource\rpc\op\RemoteEcho.class
+com\importsource\rpc\BatchMain.class
 com\importsource\rpc\op\Echo.class
 com\importsource\rpc\common\exc\RegisterException.class
 com\importsource\rpc\support\Listener.class

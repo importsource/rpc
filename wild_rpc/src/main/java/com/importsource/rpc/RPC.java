@@ -89,11 +89,11 @@ public class RPC {
 			} 
 		}
 		
-		public <T> void register(List<ServiceInfo<T>> serviceInfos) {
+		public  void register(List<ServiceInfo> serviceInfos) {
 			for(int i=0;i<serviceInfos.size();i++){
-				ServiceInfo<T> serviceInfo=serviceInfos.get(i);
-				Class<T> interfaceDefiner=serviceInfo.getInterfaceDefine();
-				Class<T> implDefine=serviceInfo.getImplDefine();
+				ServiceInfo serviceInfo=serviceInfos.get(i);
+				Class interfaceDefiner=serviceInfo.getInterfaceDefine();
+				Class implDefine=serviceInfo.getImplDefine();
 				try {
 					this.serviceEngine.put(interfaceDefiner.getName(), implDefine.newInstance());
 					System.out.println(serviceEngine);
