@@ -1,5 +1,6 @@
 # rpc
-test rpc
+
+一个rpc框架。现在主要用于importsource-yarn上。
 
 ###启动rpc server
 ```java
