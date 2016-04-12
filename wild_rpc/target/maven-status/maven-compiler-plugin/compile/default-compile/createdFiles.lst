@@ -1,0 +1,17 @@
+com\importsource\rpc\MainClient.class
+com\importsource\rpc\op\XServiceImpl.class
+com\importsource\rpc\support\Server.class
+com\importsource\rpc\entity\ServiceInfo.class
+com\importsource\rpc\op\RemoteEcho.class
+com\importsource\rpc\op\Echo.class
+com\importsource\rpc\common\exc\RegisterException.class
+com\importsource\rpc\support\Listener.class
+com\importsource\rpc\support\Client.class
+com\importsource\rpc\protocol\Method.class
+com\importsource\rpc\op\XService.class
+com\importsource\rpc\RPC.class
+com\importsource\rpc\Main.class
+com\importsource\rpc\op\MyEcho.class
+com\importsource\rpc\protocol\Invocation.class
+com\importsource\rpc\RPC$RPCServer.class
+com\importsource\rpc\RPC$1.class

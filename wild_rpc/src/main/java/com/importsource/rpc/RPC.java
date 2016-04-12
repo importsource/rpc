@@ -4,8 +4,11 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import com.importsource.rpc.common.exc.RegisterException;
+import com.importsource.rpc.entity.ServiceInfo;
 import com.importsource.rpc.protocol.Invocation;
 import com.importsource.rpc.support.Client;
 import com.importsource.rpc.support.Listener;
@@ -82,13 +85,28 @@ public class RPC {
 				this.serviceEngine.put(interfaceDefiner.getName(), impl.newInstance());
 				System.out.println(serviceEngine);
 			} catch (Throwable e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				throw new RegisterException(e.getMessage());
 			} 
+		}
+		
+		public <T> void register(List<ServiceInfo<T>> serviceInfos) {
+			for(int i=0;i<serviceInfos.size();i++){
+				ServiceInfo<T> serviceInfo=serviceInfos.get(i);
+				Class<T> interfaceDefiner=serviceInfo.getInterfaceDefine();
+				Class<T> implDefine=serviceInfo.getImplDefine();
+				try {
+					this.serviceEngine.put(interfaceDefiner.getName(), implDefine.newInstance());
+					System.out.println(serviceEngine);
+				} catch (Throwable e) {
+					throw new RegisterException(e.getMessage());
+				} 
+			}
+			
+			
 		}
 
 		public void start() {
-			System.out.println("启动服务器");
+			System.out.println("start server");
 			listener = new Listener(this);
 			this.isRuning = true;
 			listener.start();
@@ -101,6 +119,8 @@ public class RPC {
 		public boolean isRunning() {
 			return isRuning;
 		}
+
+		
 		
 	}
 }
