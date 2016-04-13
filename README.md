@@ -2,7 +2,8 @@
 
 一个rpc框架。现在主要用于importsource-yarn上。
 
-###启动rpc server
+##启动rpc server
+###单个注册
 ```java
 public class Main {
 	public static void main(String[] args) {
@@ -13,6 +14,16 @@ public class Main {
 	}
 }
 
+
+
+```
+
+###自动扫描注册
+```java
+Server server = new RPC.RPCServer();
+		List<ServiceInfo> services=DefaultScannerUtil.scan();
+		server.register(services);
+		server.start();
 ```
 
 ###启动client
