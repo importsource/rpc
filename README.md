@@ -53,3 +53,25 @@ public class MainClient {
    <version>0.0.1-SNAPSHOT</version>
 </dependency>
 ```
+
+###建议你写一个这样工具类，为你的具体项目或组件
+```java
+public class DefaultScannerUtil {
+	//默认包
+	private static final String default_pack = "com.importsource.rpc.op";
+
+	/**
+	 * 返回默认包下的服务列表
+	 * @return List<ServiceInfo> 服务列表
+	 */
+	public static List<ServiceInfo> scan(){
+		Scanner scanner=new DefaultServiceScanner();
+		try {
+			return scanner.scan(default_pack);
+		} catch (ClassNotFoundException e) {
+			throw new ServiceNotFoundException(e.getMessage());
+		}
+	}
+
+}
+```
