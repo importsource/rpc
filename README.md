@@ -42,3 +42,14 @@ public class MainClient {
 }
 
 ```
+
+<hr>
+
+###maven 使用
+```xml
+<dependency>
+   <groupId>com.importsource.rpc</groupId>
+   <artifactId>wild_rpc</artifactId>
+   <version>0.0.1-SNAPSHOT</version>
+</dependency>
+```
