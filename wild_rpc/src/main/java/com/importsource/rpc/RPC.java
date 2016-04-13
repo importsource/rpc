@@ -14,7 +14,11 @@ import com.importsource.rpc.support.Client;
 import com.importsource.rpc.support.Listener;
 import com.importsource.rpc.support.Server;
 
-
+/**
+ * 代理类
+ * @author Hezf
+ *
+ */
 public class RPC {
 	public static <T> T getProxy(final Class<T> clazz,String host,int port) {
 		
