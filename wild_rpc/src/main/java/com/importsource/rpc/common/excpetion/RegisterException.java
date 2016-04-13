@@ -1,4 +1,4 @@
-package com.importsource.rpc.common.exc;
+package com.importsource.rpc.common.excpetion;
 
 public class RegisterException extends RuntimeException {
 	private static final long serialVersionUID = 8630858492582467154L;

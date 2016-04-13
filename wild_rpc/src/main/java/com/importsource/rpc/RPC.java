@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.importsource.rpc.common.exc.RegisterException;
+import com.importsource.rpc.common.excpetion.RegisterException;
 import com.importsource.rpc.entity.ServiceInfo;
 import com.importsource.rpc.protocol.Invocation;
 import com.importsource.rpc.support.Client;
