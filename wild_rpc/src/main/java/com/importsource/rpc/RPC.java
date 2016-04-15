@@ -20,11 +20,16 @@ import com.importsource.rpc.support.Server;
  *
  */
 public class RPC {
+	/**
+	 * 得到实例
+	 * @param clazz  接口类
+	 * @param host 主机
+	 * @param port 端口
+	 * @return <T> T 实例
+	 */
 	public static <T> T getProxy(final Class<T> clazz,String host,int port) {
-		
 		final Client client = new Client(host,port);
 		InvocationHandler handler = new InvocationHandler() {
-			
 			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 				Invocation invo = new Invocation();
 				invo.setInterfaces(clazz);
@@ -38,6 +43,29 @@ public class RPC {
 		return t;
 	}
 	
+	/**
+	 * 得到实例
+	 * @param clazz  接口类
+	 * @param host 主机
+	 * @param port 端口
+	 * @param timeout 超时时间
+	 * @return <T> T 实例
+	 */
+     public static <T> T getProxy(final Class<T> clazz,String host,int port,int timeout) {
+		final Client client = new Client(host,port,timeout);
+		InvocationHandler handler = new InvocationHandler() {
+			public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+				Invocation invo = new Invocation();
+				invo.setInterfaces(clazz);
+				invo.setMethod(new com.importsource.rpc.protocol.Method(method.getName(),method.getParameterTypes()));
+				invo.setParams(args);
+				client.invoke(invo);
+				return invo.getResult();
+			}
+		};
+		T t = (T) Proxy.newProxyInstance(RPC.class.getClassLoader(), new Class[] {clazz}, handler);
+		return t;
+	}
 	
 	public static class RPCServer implements Server{
 		private int port = 20382;
